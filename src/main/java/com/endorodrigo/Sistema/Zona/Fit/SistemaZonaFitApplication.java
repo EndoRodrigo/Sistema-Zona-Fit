@@ -102,8 +102,9 @@ public class SistemaZonaFitApplication implements CommandLineRunner {
 				}
 				log.info(findCustomer.toString());
 			}
-			default -> {
-				return false;
+			case 6 -> {
+				log.info(" *** Hasta pronto*** ");
+				return true;
 			}
 		}
 
