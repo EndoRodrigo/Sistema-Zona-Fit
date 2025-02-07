@@ -93,7 +93,14 @@ public class SistemaZonaFitApplication implements CommandLineRunner {
 				}
 			}
 			case 5 -> {
-				log.info("Lista de customers: ");
+				log.info("Eliminar cliente: ");
+				log.info("id: ");
+				var id = consola.nextInt();
+				var findCustomer = customerService.getCustomer(id);
+				if (findCustomer != null) {
+					customerService.deleteCustomer(id);
+				}
+				log.info(findCustomer.toString());
 			}
 			default -> {
 				return false;
