@@ -46,6 +46,7 @@ public class SistemaZonaFitApplication implements CommandLineRunner {
 	}
 
 	private boolean processOption(Scanner consola, int opcion) {
+		consola.nextLine();
 		switch (opcion) {
 			case 1 -> {
 				log.info("Lista de customers: ");
@@ -77,12 +78,12 @@ public class SistemaZonaFitApplication implements CommandLineRunner {
 				log.info("Actualiza cliente: ");
 				log.info("ID: ");
 				var id = consola.nextInt();
+				consola.nextLine();
 				var findCustomer = customerService.getCustomer(id);
 				if (findCustomer != null) {
 					log.info("Agregar cliente: ");
 					log.info("Nombre: ");
 					findCustomer.setName(consola.nextLine());
-
 					log.info("Apellido: ");
 					findCustomer.setLastName(consola.nextLine());
 					log.info("Staus: ");
@@ -96,6 +97,7 @@ public class SistemaZonaFitApplication implements CommandLineRunner {
 				log.info("Eliminar cliente: ");
 				log.info("id: ");
 				var id = consola.nextInt();
+				consola.nextLine();
 				var findCustomer = customerService.getCustomer(id);
 				if (findCustomer != null) {
 					customerService.deleteCustomer(id);
@@ -120,7 +122,7 @@ public class SistemaZonaFitApplication implements CommandLineRunner {
 				"\n 5. Eliminar cliente" +
 				"\n 6. Salir" +
 				"\n Eleguir una opcion: ");
-        return Integer.parseInt(consola.nextLine());
+        return consola.nextInt();
 	}
 
 
