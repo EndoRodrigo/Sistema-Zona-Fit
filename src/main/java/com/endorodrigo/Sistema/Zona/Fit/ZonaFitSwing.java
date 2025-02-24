@@ -10,6 +10,8 @@ import javax.swing.*;
 @SpringBootApplication
 public class ZonaFitSwing {
     public static void main(String[] args) {
+        // Configurar el modo oscuro
+        //FlatDraculaLaf.setup();
         // Instancia la fabrica de spring
         ConfigurableApplicationContext contextoSpring =
                 new SpringApplicationBuilder(ZonaFitSwing.class)

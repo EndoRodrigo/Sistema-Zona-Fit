@@ -30,6 +30,7 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+        runtimeOnly group: 'com.formdev', name: 'flatlaf', version: '3.5.4'
 }
 
 tasks.named('test') {
