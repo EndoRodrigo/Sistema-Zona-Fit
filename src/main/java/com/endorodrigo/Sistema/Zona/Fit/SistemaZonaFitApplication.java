@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Scanner;
 
 
-@SpringBootApplication
+//@SpringBootApplication
 public class SistemaZonaFitApplication implements CommandLineRunner {
 
 	@Autowired
